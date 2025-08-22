@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Game Predictor - مصر</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      .console-box {
+        font-family: monospace;
+        background-color: #1a1a1a;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 20px #00ff88;
+        color: #00ff88;
+        height: 250px;
+        overflow-y: auto;
+      }
+      .loading-screen {
+        font-family: monospace;
+        background: #000;
+        color: #00ff88;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+        z-index: 50;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      .hidden-screen {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div id="loading" class="loading-screen hidden-screen">
+      <p>جاري التحميل... من فضلك انتظر بينما نقوم بإعداد تجربتك.</p>
+    </div>
+  
+    <div id="mainContent" class="">
+      <header class="w-full bg-gray-800 p-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-green-400">مُتنبئ الألعاب الذكي 1xBet</h1>
+        <nav class="space-x-4">
+          <a href="#how" class="hover:text-green-400">كيف يعمل؟</a>
+          <a href="#games" class="hover:text-green-400">الألعاب</a>
+          <a href="#start" class="hover:text-green-400">ابدأ الآن</a>
+        </nav>
+      </header>
+  
+      <section class="min-h-screen flex flex-col items-center justify-center px-4 text-center">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6">اربح المال الحقيقي مع تنبؤات الألعاب الذكية</h2>
+        <p class="max-w-xl mb-8 text-gray-300">انضم إلى آلاف المصريين الذين يستخدمون الذكاء الصناعي لدينا للفوز في ألعاب مثل Aviator و Mines و Penalty. دقة إشارات تصل إلى 98%، تنبؤات في الوقت الفعلي، وسحب الأموال بسرعة!</p>
+        <button id="startButton" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition">ابدأ الربح الآن</button>
+        <div id="errorBox" class="hidden bg-red-600 p-6 rounded-xl max-w-md mx-auto mt-6">
+          <h2 class="text-xl font-bold mb-2">⚠️ الحساب غير موجود</h2>
+          <p class="mb-4">يبدو أنك لم تسجل بعد. من فضلك قم بإنشاء حساب جديد في 1xBet وأودع الأموال لتفعيل الوصول للتنبؤات.</p>
+          <p class="text-lg mb-4 text-yellow-400">استخدم الرمز الترويجي الخاص: <strong>RRK778</strong></p>
+          <a href="https://reffpa.com/L?tag=d_4622278m_97c__[]general[]_d173877_l213428_adaptive_banner&site=4622278&ad=97&r=registration" target="_blank" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg transition">
+            سجل الآن في 1xBet
+          </a>
+        </div>
+      </section>
+  
+      <section class="bg-gray-800 py-12 px-6 text-center">
+        <h3 class="text-2xl font-bold text-green-400 mb-6">أفضل الرابحين اليوم (EGP)</h3>
+        <div class="grid md:grid-cols-2 gap-4 text-left max-w-4xl mx-auto text-sm text-green-300">
+          <p>👤 معرف المستخدم: 1218473422 – 275,328 EGP</p>
+          <p>👤 معرف المستخدم: 9912384741 – 221,900 EGP</p>
+          <p>👤 معرف المستخدم: 3099234822 – 184,120 EGP</p>
+          <p>👤 معرف المستخدم: 1187339121 – 150,000 EGP</p>
+          <p>👤 معرف المستخدم: 4412900113 – 132,850 EGP</p>
+          <p>👤 معرف المستخدم: 8283721091 – 128,440 EGP</p>
+          <p>👤 معرف المستخدم: 7751937742 – 100,705 EGP</p>
+          <p>👤 معرف المستخدم: 5554921811 – 98,330 EGP</p>
+          <p>👤 معرف المستخدم: 1983238742 – 85,000 EGP</p>
+          <p>👤 معرف المستخدم: 3377749301 – 79,210 EGP</p>
+        </div>
+      </section> 
+  
+      <section id="games" class="bg-gray-800 py-12 px-6 text-center">
+        <h3 class="text-2xl font-bold text-green-400 mb-6">الألعاب المدعومة</h3>
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-bold mb-2">🎮 Aviator</h4>
+            <p class="text-gray-300">تنبأ متى ستخرج الطائرة قبل أن تطير بعيدًا! الذكاء الصناعي لدينا يكتشف الاتجاهات في الوقت الفعلي.</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-bold mb-2">💣 Mines</h4>
+            <p class="text-gray-300">تجنب القنابل، اجمع الأرباح. نظامنا يحدد المسارات منخفضة المخاطر لتحقيق أقصى ربح.</p>
+          </div>
+          <div class="bg-gray-700 p-6 rounded-xl shadow-lg">
+            <h4 class="text-xl font-bold mb-2">🥅 Penalty</h4>
+            <p class="text-gray-300">اعرف أين يجب أن تسدد أو تغوص. اهزم حارس المرمى باستخدام التنبؤات المدعومة بالبيانات.</p>
+          </div>
+        </div>
+      </section>
+  
+      <section id="how" class="bg-gray-900 py-12 px-6 text-center">
+        <h3 class="text-2xl font-bold text-green-400 mb-6">كيف يعمل؟</h3>
+        <div class="max-w-3xl mx-auto space-y-4 text-gray-300">
+          <p>📡 يقوم الذكاء الصناعي لدينا بمسح بيانات الألعاب الحية والنتائج التاريخية 24/7.</p>
+          <p>💡 يحدد الأنماط التي تؤدي إلى الفوز المتسق.</p>
+          <p>📲 تتلقى التنبؤات في الوقت الفعلي مباشرة إلى جهازك.</p>
+        </div>
+      </section>
+  
+      <section class="bg-black py-12 px-6 text-center">
+        <h3 class="text-xl font-bold text-green-400 mb-4">[ سجل وحدة المراقبة ]</h3>
+        <div class="console-box max-w-3xl mx-auto text-left" id="console">
+          <p>[INFO] خدمة التنبؤ نشطة ✅</p>
+        </div>
+      </section>
+  
+      <footer class="text-center text-gray-500 text-sm py-6">
+        © 2025 AI Predictor. غير تابع لـ 1xBet. استخدمه بحذر.
+      </footer>
+    </div>
+  
+    <script>
+      // Automatically show main content after a delay
+      setTimeout(() => {
+        document.getElementById("loading").classList.add("hidden-screen");
+        document.getElementById("mainContent").classList.remove("hidden-screen");
+      }, 3000); // 3 seconds delay for loading
+  
+      // Show error on button click
+      document.getElementById("startButton").addEventListener("click", () => {
+        document.getElementById("errorBox").classList.remove("hidden");
+      });
+    </script>
+  
+  
+  </body></html>
